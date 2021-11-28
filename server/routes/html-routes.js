@@ -11,6 +11,8 @@ module.exports = function (app) {
 
   // 404 Page Error
   app.get("*", function (req, res) {
-    res.redirect("/home");
+    res.sendFile(
+      path.join(__dirname, "../../public/pages/NotFound/index.html")
+    );
   });
 };
