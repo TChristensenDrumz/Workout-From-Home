@@ -1,0 +1,31 @@
+{
+  "name": "workout-from-home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TChristensenDrumz/Workout-From-Home.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TChristensenDrumz/Workout-From-Home/issues"
+  },
+  "homepage": "https://github.com/TChristensenDrumz/Workout-From-Home#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "caber": "^5.0.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.12.0-alpha.1"
+  }
+}
