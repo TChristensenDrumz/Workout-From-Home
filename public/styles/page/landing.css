@@ -1,3 +1,42 @@
 .landing-hero {
   height: 45vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.one {
+  background-image: url("../../assets/images/landing/workoutfromhome.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.two {
+  background-image: url("../../assets/images/landing/easyworkout.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.three {
+  background-image: url("../../assets/images/landing/workouttogether.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing-tagline {
+  color: whitesmoke;
+  background-color: var(--clr-purple-t);
+}
+
+.landing-signup {
+  color: whitesmoke;
+  background-color: var(--clr-green);
+  text-decoration: none;
+}
+
+.landing-signup:hover,
+.landing-signup:focus {
+  color: whitesmoke;
 }
