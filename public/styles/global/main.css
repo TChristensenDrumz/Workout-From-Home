@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: auto;
+}
+
+.layout-main-container {
+  width: 100vw;
+
+  display: grid;
+  grid-template-rows: minmax(85vh, auto) 15vh;
+  grid-template-areas: "main" "footer";
+}
+
+.main-area {
+  grid-area: main;
+
+  padding-top: 4.5rem;
+}
+
+.footer {
+  grid-area: footer;
+
+  background-color: var(--clr-green);
+}
+
+.navbar {
+  position: fixed;
+  width: 100vw;
+  padding: 1rem;
+}
+
+.navbar-dark {
+  background-color: var(--clr-green);
+}
