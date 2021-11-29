@@ -29,14 +29,3 @@
   color: whitesmoke;
   background-color: var(--clr-purple-t);
 }
-
-.landing-signup {
-  color: whitesmoke;
-  background-color: var(--clr-green);
-  text-decoration: none;
-}
-
-.landing-signup:hover,
-.landing-signup:focus {
-  color: whitesmoke;
-}

@@ -36,3 +36,14 @@ body {
 .navbar-dark {
   background-color: var(--clr-green);
 }
+
+.wfh-btn {
+  color: whitesmoke;
+  background-color: var(--clr-green);
+  text-decoration: none;
+}
+
+.wfh-btn:hover,
+.wfh-btn:focus {
+  color: whitesmoke;
+}
