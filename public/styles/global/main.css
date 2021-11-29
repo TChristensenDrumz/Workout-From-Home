@@ -38,12 +38,16 @@ body {
 }
 
 .wfh-btn {
-  color: whitesmoke;
-  background-color: var(--clr-green);
+  color: var(--btn-clr, whitesmoke);
+  background-color: var(--btn-bgc, black);
   text-decoration: none;
 }
 
 .wfh-btn:hover,
 .wfh-btn:focus {
-  color: whitesmoke;
+  color: var(--btn-clr, whitesmoke);
+}
+
+.wfh-btn-green {
+  --btn-bgc: var(--clr-green);
 }
