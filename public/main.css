@@ -1,0 +1,18 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  margin: auto;
+}
+
+.layout-main-container {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
