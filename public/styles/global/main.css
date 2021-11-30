@@ -79,3 +79,8 @@ body {
 .wfh-btn-green {
   --btn-bgc: var(--clr-green);
 }
+
+.wfh-btn-purple {
+  --btn-clr: rgba(255, 255, 255, 0.55);
+  --btn-bgc: var(--clr-dark-purple);
+}

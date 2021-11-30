@@ -1,3 +1,33 @@
+/* Navbar */
+.navbar-nav {
+  display: grid;
+
+  grid-template-rows: 5rem;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "signup login";
+}
+
+.navbar-nav .nav-link {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.navbar-grid-signup {
+  grid-area: signup;
+}
+
+.navbar-grid-login {
+  grid-area: login;
+}
+
+.navbar-grid-signup,
+.navbar-grid-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Display */
 .landing-hero {
   height: 45vh;
 
