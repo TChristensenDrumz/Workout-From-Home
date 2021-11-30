@@ -1,0 +1,73 @@
+.form-container {
+  width: 100vw;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-areas: "." "form";
+}
+
+.form-area {
+  grid-area: form;
+}
+
+.logo-area,
+.form-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-logo {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: var(--clr-purple);
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0 0.5rem;
+
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+}
+
+.form-logo:hover,
+.form-logo:focus {
+  color: whitesmoke;
+  background-color: var(--clr-dark-purple);
+}
+
+.form-info {
+  width: 19.633rem;
+  min-height: 23.5rem;
+  background-color: white;
+  padding: 2rem 1rem;
+}
+
+.form-control:focus {
+  border-color: var(--clr-dark-purple);
+  box-shadow: 0 0 0 0.25rem var(--clr-purple);
+}
+
+.form-button {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: var(--clr-dark-purple);
+  text-decoration: none;
+  border-style: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.1s ease-in;
+}
+
+.form-button:hover,
+.form-button:focus {
+  color: whitesmoke;
+}
+
+.title {
+  color: var(--clr-dark-purple);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}

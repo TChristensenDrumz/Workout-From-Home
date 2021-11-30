@@ -16,14 +16,15 @@ body {
   padding: 1rem;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    padding: 1rem 2rem;
-  }
-}
-
 .navbar-dark {
   background-color: var(--clr-green);
+}
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    font-size: 1.75rem;
+    padding-left: 0.3125rem;
+  }
 }
 
 /* Container */
@@ -39,6 +40,10 @@ body {
   grid-area: main;
 
   padding-top: 4.5rem;
+}
+
+.main-area-alt {
+  grid-area: main;
 }
 
 @media (min-width: 768px) {
@@ -86,6 +91,7 @@ body {
   color: var(--btn-clr, rgba(255, 255, 255, 0.85));
   background-color: var(--btn-bgc, black);
   text-decoration: none;
+  border-style: none;
   padding: 0.5rem 1rem;
   transition: color 0.1s ease-in, padding 0.2s ease-in;
 }
@@ -130,4 +136,12 @@ body {
 .wfh-disabled:hover,
 .wfh-disabled:focus {
   color: var(--btn-clr, rgba(255, 255, 255, 0.85));
+}
+
+/* Images */
+.home-gym-background {
+  background-image: url("../../assets/images/homegym.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
 }
