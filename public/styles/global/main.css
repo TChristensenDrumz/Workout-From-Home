@@ -9,6 +9,23 @@ body {
   font-family: var(--font-outfit);
 }
 
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100vw;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+}
+
+.navbar-dark {
+  background-color: var(--clr-green);
+}
+
 /* Container */
 .layout-main-container {
   width: 100vw;
@@ -22,6 +39,12 @@ body {
   grid-area: main;
 
   padding-top: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  .main-area {
+    padding-top: 5rem;
+  }
 }
 
 /* Footer */
@@ -47,15 +70,10 @@ body {
   color: whitesmoke;
 }
 
-/* Navbar */
-.navbar {
-  position: fixed;
-  width: 100vw;
-  padding: 1rem;
-}
-
-.navbar-dark {
-  background-color: var(--clr-green);
+@media (min-height: 920px) {
+  .footer {
+    font-size: 1.5rem;
+  }
 }
 
 /* Fonts */
@@ -65,10 +83,30 @@ body {
 
 /* Buttons */
 .wfh-btn {
-  color: var(--btn-clr, whitesmoke);
+  color: var(--btn-clr, rgba(255, 255, 255, 0.85));
   background-color: var(--btn-bgc, black);
   text-decoration: none;
   padding: 0.5rem 1rem;
+  transition: color 0.1s ease-in, padding 0.2s ease-in;
+}
+
+@media (min-width: 768px) {
+  .wfh-btn {
+    font-size: 1.3rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wfh-btn {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wfh-btn {
+    font-size: 2rem;
+  }
 }
 
 .wfh-btn:hover,
@@ -83,4 +121,13 @@ body {
 .wfh-btn-purple {
   --btn-clr: rgba(255, 255, 255, 0.55);
   --btn-bgc: var(--clr-dark-purple);
+}
+
+.wfh-disabled {
+  cursor: default;
+}
+
+.wfh-disabled:hover,
+.wfh-disabled:focus {
+  color: var(--btn-clr, rgba(255, 255, 255, 0.85));
 }
