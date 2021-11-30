@@ -1,3 +1,4 @@
+/* Global */
 html {
   scroll-behavior: smooth;
 }
@@ -5,8 +6,10 @@ html {
 body {
   overflow-x: hidden;
   margin: auto;
+  font-family: var(--font-outfit);
 }
 
+/* Container */
 .layout-main-container {
   width: 100vw;
 
@@ -21,12 +24,30 @@ body {
   padding-top: 4.5rem;
 }
 
+/* Footer */
 .footer {
   grid-area: footer;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: whitesmoke;
   background-color: var(--clr-green);
 }
 
+.footer-logo {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+  color: whitesmoke;
+}
+
+/* Navbar */
 .navbar {
   position: fixed;
   width: 100vw;
@@ -37,10 +58,17 @@ body {
   background-color: var(--clr-green);
 }
 
+/* Fonts */
+.bevan {
+  font-family: var(--font-bevan);
+}
+
+/* Buttons */
 .wfh-btn {
   color: var(--btn-clr, whitesmoke);
   background-color: var(--btn-bgc, black);
   text-decoration: none;
+  padding: 0.5rem 1rem;
 }
 
 .wfh-btn:hover,

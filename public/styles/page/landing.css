@@ -11,21 +11,31 @@
   background-image: url("../../assets/images/landing/workoutfromhome.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: left;
 }
 
 .two {
   background-image: url("../../assets/images/landing/easyworkout.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .three {
   background-image: url("../../assets/images/landing/workouttogether.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .landing-tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   color: whitesmoke;
-  background-color: var(--clr-purple-t);
+  background-color: var(--clr-purple);
+  font-size: 1.2rem;
+  padding: 1rem;
 }
