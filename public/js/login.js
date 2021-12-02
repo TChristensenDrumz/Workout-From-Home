@@ -14,6 +14,9 @@ $(document).ready(function () {
       password: passwordInput.val().trim(),
     };
 
+    emailHelp.text("");
+    passwordError.text("");
+
     // Throw errors if information is missing
     if (!userData.email) {
       emailInput.attr("style", "border-color: red");
@@ -25,15 +28,11 @@ $(document).ready(function () {
       return;
     }
 
-    emailHelp.text("");
-
     if (!userData.password) {
       passwordInput.attr("style", "border-color: red");
       passwordError.text("Please enter a password");
       return;
     }
-
-    passwordError.text("");
 
     // If we have an email and password, run the loginUser function
     loginUser(userData.email, userData.password);

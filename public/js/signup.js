@@ -14,6 +14,10 @@ $(document).ready(function () {
       password: passwordInput.val().trim(),
     };
 
+    emailHelp.attr("class", "form-text text-muted");
+    emailHelp.text("We'll never share your email with anyone else.");
+    passwordError.text("");
+
     // Throw errors if information is missing
     if (!userData.email) {
       emailInput.attr("style", "border-color: red");
@@ -26,16 +30,11 @@ $(document).ready(function () {
       return;
     }
 
-    emailHelp.attr("class", "form-text text-muted");
-    emailHelp.text("We'll never share your email with anyone else.");
-
     if (!userData.password) {
       passwordInput.attr("style", "border-color: red");
       passwordError.text("Please enter a password");
       return;
     }
-
-    passwordError.text("");
 
     // If we have an email and password, run the signupUser function
     signupUser(userData.email, userData.password);
