@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     passwordError.text("");
 
-    // If we have an email and password, run the signUpUser function
+    // If we have an email and password, run the signupUser function
     signupUser(userData.email, userData.password);
     passwordInput.val("");
   });
