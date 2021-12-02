@@ -22,7 +22,7 @@
       <div class="main-area-alt">
         <div class="form-container home-gym-background">
           <div class="form-area">
-            <form class="form-info">
+            <form class="form-info" id="login">
               <div class="title pb-4">Login</div>
               <div class="form-group pb-2">
                 <label for="userEmail">Email</label>
@@ -33,6 +33,7 @@
                   aria-describedby="emailHelp"
                   placeholder="Email"
                 />
+                <small id="emailHelp" class="error"></small>
               </div>
               <div class="form-group pb-4">
                 <label for="userPassword">Password</label>
@@ -42,6 +43,7 @@
                   id="userPassword"
                   placeholder="Password"
                 />
+                <small class="error" id="passwordError"></small>
               </div>
               <button type="submit" class="form-button">Submit</button>
               <div class="pt-2">
