@@ -99,6 +99,10 @@
   }
 }
 
+.success {
+  color: var(--clr-green);
+}
+
 .error {
   color: red;
 }

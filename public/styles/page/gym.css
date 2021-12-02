@@ -1,4 +1,6 @@
 .gym-header {
+  width: 100vw;
+
   color: whitesmoke;
   background-color: var(--clr-purple);
   border-bottom: 1px solid var(--clr-dark-purple);
@@ -8,7 +10,7 @@
 
 .gym-container {
   width: 100%;
-  height: calc(100% - calc(3.375rem + 1.5vw));
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -17,6 +19,19 @@
 }
 
 .equipment-container {
+  width: 100vw;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   background-color: white;
-  padding: 5% 25% 10%;
+}
+
+@media (min-height: 660px) {
+  .equipment-container {
+    padding: 5% 25% 10%;
+  }
 }
