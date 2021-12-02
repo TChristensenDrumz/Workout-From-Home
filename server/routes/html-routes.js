@@ -6,7 +6,7 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
   app.get("/gym", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, "../../public/pages/login.html"));
+    res.sendFile(path.join(__dirname, "../../public/pages/gym.html"));
   });
 
   app.get("/login", function (req, res) {

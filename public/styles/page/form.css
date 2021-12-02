@@ -33,13 +33,15 @@
 }
 
 @media (min-width: 601px) {
-  .form-info {
-    width: 26.875rem;
-    min-height: 31.375rem;
+  @media (min-height: 720px) {
+    .form-info {
+      width: 26.875rem;
+      min-height: 31.375rem;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 
