@@ -2,21 +2,21 @@
   color: whitesmoke;
   background-color: var(--clr-purple);
   border-bottom: 1px solid var(--clr-dark-purple);
-  padding: 0.5rem 1rem;
-}
-
-.equipment-header {
-  width: 100%;
-  color: whitesmoke;
-  background-color: var(--clr-purple);
+  margin: 0;
   padding: 0.5rem 1rem;
 }
 
 .gym-container {
+  width: 100%;
+  height: calc(100% - calc(3.375rem + 1.5vw));
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+}
 
-  padding: 1rem 3rem 3rem;
+.equipment-container {
+  background-color: white;
+  padding: 1rem 3rem 2rem;
 }

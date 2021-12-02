@@ -59,8 +59,18 @@
   box-shadow: 0 0 0 0.25rem var(--clr-purple);
 }
 
+.form-check-input:focus {
+  border-color: var(--clr-dark-purple);
+  box-shadow: 0 0 0 0.25rem var(--clr-purple);
+}
+
+.form-check-input:checked[type="checkbox"] {
+  background-color: var(--clr-green);
+  border-color: var(--clr-dark-purple);
+}
+
 .form-button {
-  width: 5.101rem;
+  width: 5.316rem;
   height: 2.5rem;
   color: rgba(255, 255, 255, 0.85);
   background-color: var(--clr-dark-purple);

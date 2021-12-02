@@ -13,6 +13,7 @@
     />
     <link href="../styles/global/main.css" rel="stylesheet" />
     <link href="../styles/global/variables.css" rel="stylesheet" />
+    <link href="../styles/global/form.css" rel="stylesheet" />
     <link href="../styles/page/gym.css" rel="stylesheet" />
     <title>Workout From Home | Your Gym</title>
   </head>
@@ -43,135 +44,142 @@
           <li class="nav-item">
             <a class="nav-link" href="/workout">Workout</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <!-- Body -->
     <div class="layout-main-container">
-      <div class="main-area">
+      <div class="main-area home-gym-background">
         <h1 class="gym-header">Your Home Gym</h1>
         <div class="gym-container">
-          <h5 class="equipment-header">Equipment</h5>
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="barbell"
-              id="barbell"
-              value="1"
-            />
-            <label class="form-check-label" for="barbell">Barbell</label>
-          </div>
+          <div class="equipment-container">
+            <h5 class="title pb-1">Equipment</h5>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="barbell"
+                id="barbell"
+                value="1"
+              />
+              <label class="form-check-label" for="barbell">Barbell</label>
+            </div>
 
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="bench"
-              id="bench"
-              value="8"
-            />
-            <label class="form-check-label" for="bench">Bench</label>
-          </div>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="bench"
+                id="bench"
+                value="8"
+              />
+              <label class="form-check-label" for="bench">Bench</label>
+            </div>
 
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="dumbbell"
-              id="dumbbell"
-              value="3"
-            />
-            <label class="form-check-label" for="dumbbell">Dumbbells</label>
-          </div>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="dumbbell"
+                id="dumbbell"
+                value="3"
+              />
+              <label class="form-check-label" for="dumbbell">Dumbbells</label>
+            </div>
 
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="gym-mat"
-              id="gym-mat"
-              value="4"
-            />
-            <label class="form-check-label" for="gym-mat">Gym Mat</label>
-          </div>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="gym-mat"
+                id="gym-mat"
+                value="4"
+              />
+              <label class="form-check-label" for="gym-mat">Gym Mat</label>
+            </div>
 
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="incline-bench"
-              id="incline-bench"
-              value="9"
-            />
-            <label class="form-check-label" for="incline-bench"
-              >Incline Bench</label
-            >
-          </div>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="incline-bench"
+                id="incline-bench"
+                value="9"
+              />
+              <label class="form-check-label" for="incline-bench"
+                >Incline Bench</label
+              >
+            </div>
 
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="Kettlebell"
-              id="kettlebell"
-              value="10"
-            />
-            <label class="form-check-label" for="kettlebell">Kettlebells</label>
-          </div>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="Kettlebell"
+                id="kettlebell"
+                value="10"
+              />
+              <label class="form-check-label" for="kettlebell"
+                >Kettlebells</label
+              >
+            </div>
 
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="pull-up-bar"
-              id="pull-up-bar"
-              value="6"
-            />
-            <label class="form-check-label" for="pull-up-bar"
-              >Pull-up Bar</label
-            >
-          </div>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="pull-up-bar"
+                id="pull-up-bar"
+                value="6"
+              />
+              <label class="form-check-label" for="pull-up-bar"
+                >Pull-up Bar</label
+              >
+            </div>
 
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="swiss-ball"
-              id="swiss-ball"
-              value="5"
-            />
-            <label class="form-check-label" for="swiss-ball"
-              >Medicine Ball</label
-            >
-          </div>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="swiss-ball"
+                id="swiss-ball"
+                value="5"
+              />
+              <label class="form-check-label" for="swiss-ball"
+                >Medicine Ball</label
+              >
+            </div>
 
-          <div class="equipment">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="sz-bar"
-              id="ez-bar"
-              value="2"
-            />
-            <label class="form-check-label" for="ez-bar">EZ-Bar</label>
-          </div>
+            <div class="equipment">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="sz-bar"
+                id="ez-bar"
+                value="2"
+              />
+              <label class="form-check-label" for="ez-bar">EZ-Bar</label>
+            </div>
 
-          <div class="equipment pb-3">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="default"
-              id="default"
-              value=""
-            />
-            <label class="form-check-label" for="default">None</label>
-          </div>
+            <div class="equipment pb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="default"
+                id="default"
+                value=""
+              />
+              <label class="form-check-label" for="default">None</label>
+            </div>
 
-          <button type="button" class="wfh-btn wfh-btn-purple" id="submit">
-            Update
-          </button>
+            <button type="button" class="form-button" id="submit">
+              Update
+            </button>
+          </div>
         </div>
       </div>
 
