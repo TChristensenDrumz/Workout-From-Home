@@ -29,6 +29,10 @@ body {
     font-size: 1.75rem;
     padding-left: 0.3125rem;
   }
+
+  .navbar-expand-md .navbar-collapse {
+    justify-content: flex-end;
+  }
 }
 
 /* Container */

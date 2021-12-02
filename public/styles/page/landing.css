@@ -37,10 +37,6 @@
     font-size: 1.2rem;
   }
 
-  .navbar-expand-md .navbar-collapse {
-    justify-content: flex-end;
-  }
-
   .navbar-nav .nav-link {
     padding: 0.5rem 1rem;
   }
