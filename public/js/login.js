@@ -64,18 +64,7 @@ $(document).ready(function () {
       .catch(handleLoginErr);
   }
 
-  function handleLoginErr(err) {
-    console.log(err);
-    if (err.responseJSON?.type === "invalidEmail") {
-      emailInput.attr("style", "border-color: red");
-      emailHelp.text("Invalid email address");
-      return;
-    }
-    if (err.responseJSON?.fields?.email) {
-      emailInput.attr("style", "border-color: red");
-      emailHelp.text("An account with this email address already exists");
-      return;
-    }
-    alert(`Error code ${err.status}: ${err.statusText}`);
+  function handleLoginErr() {
+    passwordError.text("Incorrect email or password");
   }
 });
