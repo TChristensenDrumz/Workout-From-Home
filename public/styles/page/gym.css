@@ -1,0 +1,22 @@
+.gym-header {
+  color: whitesmoke;
+  background-color: var(--clr-purple);
+  border-bottom: 1px solid var(--clr-dark-purple);
+  padding: 0.5rem 1rem;
+}
+
+.equipment-header {
+  width: 100%;
+  color: whitesmoke;
+  background-color: var(--clr-purple);
+  padding: 0.5rem 1rem;
+}
+
+.gym-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 1rem 3rem 3rem;
+}
