@@ -26,9 +26,19 @@ $(document).ready(function () {
       return;
     }
 
+    emailHelp.attr("class", "form-text text-muted");
+    emailHelp.text("We'll never share your email with anyone else.");
+
+    if (!userData.password) {
+      passwordInput.attr("style", "border-color: red");
+      passwordError.text("Please enter a password");
+      return;
+    }
+
+    passwordError.text("");
+
     // If we have an email and password, run the signUpUser function
     signupUser(userData.email, userData.password);
-    emailInput.val("");
     passwordInput.val("");
   });
 
@@ -50,6 +60,7 @@ $(document).ready(function () {
       password: password,
     })
       .then(function (data) {
+        emailInput.val("");
         location.replace("/gym");
       })
       // If there's an error, handle it with the error function
@@ -57,6 +68,19 @@ $(document).ready(function () {
   }
 
   function handleSignupErr(err) {
+    console.log(err);
+    if (err.responseJSON?.type === "invalidEmail") {
+      emailInput.attr("style", "border-color: red");
+      emailHelp.attr("class", "error");
+      emailHelp.text("Invalid email address");
+      return;
+    }
+    if (err.responseJSON?.fields?.email) {
+      emailInput.attr("style", "border-color: red");
+      emailHelp.attr("class", "error");
+      emailHelp.text("An account with this email address already exists");
+      return;
+    }
     alert(`Error code ${err.status}: ${err.statusText}`);
   }
 });
