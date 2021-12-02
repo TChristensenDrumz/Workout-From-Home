@@ -67,7 +67,6 @@ $(document).ready(function () {
   }
 
   function handleSignupErr(err) {
-    console.log(err);
     if (err.responseJSON?.type === "invalidEmail") {
       emailInput.attr("style", "border-color: red");
       emailHelp.attr("class", "error");
