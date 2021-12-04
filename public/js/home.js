@@ -30,13 +30,17 @@ $(document).ready(function () {
   calculate.on("click", function (event) {
     event.preventDefault();
 
+    result.removeAttr("style");
+
     if (!heightMeasure.val() || !weightMeasure.val()) {
+      result.attr("style", "color:red");
       result.text("Please fill out all fields");
       return;
     }
 
     if (customaryButton.hasClass("active")) {
       if (!inches.val()) {
+        result.attr("style", "color:red");
         result.text("Please fill out all fields");
         return;
       }
