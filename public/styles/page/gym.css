@@ -1,13 +1,3 @@
-.gym-header {
-  width: 100vw;
-
-  color: whitesmoke;
-  background-color: var(--clr-purple);
-  border-bottom: 1px solid var(--clr-dark-purple);
-  margin: 0;
-  padding: 0.5rem 1rem;
-}
-
 .gym-container {
   width: 100%;
   height: 100%;
@@ -16,6 +6,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.gym-header {
+  width: 100vw;
+
+  color: whitesmoke;
+  background-color: var(--clr-purple);
+  border-bottom: 1px solid var(--clr-dark-purple);
+  margin: 0;
+  padding: 0.5rem 1rem;
 }
 
 .equipment-container {
@@ -30,8 +30,127 @@
   background-color: white;
 }
 
-@media (min-height: 660px) {
-  .equipment-container {
-    padding: 5% 25% 10%;
+@media (min-width: 767px) {
+  .equipment-grid {
+    width: 100%;
+    height: 80%;
+
+    display: grid;
+
+    grid-template-rows: 15% 45% 40%;
+    grid-template-areas: "header" "opts" "button";
+  }
+
+  .equipment-header {
+    grid-area: header;
+  }
+
+  .equipment-opts {
+    grid-area: opts;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 0 20%;
+  }
+
+  .gym-button {
+    grid-area: button;
+  }
+
+  .equipment-header,
+  .gym-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.none-opt {
+  padding-bottom: 0.25rem;
+}
+
+@media (min-height: 640px) {
+  .none-opt {
+    padding-bottom: 1rem;
+  }
+}
+
+/* Equipment Padding */
+@media (min-height: 750px) {
+  .equipment {
+    padding-bottom: 0.25rem;
+  }
+}
+
+@media (min-height: 820px) {
+  .equipment {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-height: 1000px) {
+  .equipment {
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* Gym Form */
+@media (min-width: 600px) {
+  .form-check-label {
+    font-size: 1.1rem;
+  }
+
+  .form-check-input {
+    width: 1.1em;
+    height: 1.1em;
+  }
+}
+
+@media (min-width: 767px) {
+  @media (min-height: 720px) {
+    .title {
+      font-size: 1.75rem;
+    }
+
+    .form-check-label {
+      font-size: 1.2rem;
+    }
+
+    .form-check-input {
+      width: 1.2em;
+      height: 1.2em;
+    }
+
+    .form-button {
+      width: 5.848rem;
+      height: 2.75rem;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  @media (min-height: 720px) {
+    .title {
+      font-size: 2.25rem;
+    }
+
+    .form-check-label {
+      font-size: 1.4rem;
+    }
+
+    .form-check-input {
+      width: 1.4em;
+      height: 1.4em;
+    }
+
+    .form-button {
+      width: 6.911rem;
+      height: 3.25rem;
+      font-size: 1.3rem;
+    }
   }
 }
