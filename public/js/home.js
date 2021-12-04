@@ -1,0 +1,56 @@
+$(document).ready(function () {
+  const customaryButton = $("button#customary");
+  const metricButton = $("button#metric");
+  const heightMeasure = $("input#bmi-height");
+  const weightMeasure = $("input#bmi-weight");
+  const inches = $("input#bmi-height-us");
+  const calculate = $("button#bmi-calculate");
+  const result = $("h6#bmi");
+
+  customaryButton.on("click", function (event) {
+    event.preventDefault();
+
+    customaryButton.addClass("active");
+    heightMeasure.prop("placeholder", "Feet");
+    weightMeasure.prop("placeholder", "Pounds");
+    inches.removeAttr("style");
+    metricButton.removeClass("active");
+  });
+
+  metricButton.on("click", function (event) {
+    event.preventDefault();
+
+    metricButton.addClass("active");
+    heightMeasure.prop("placeholder", "Meters");
+    weightMeasure.prop("placeholder", "Kilograms");
+    inches.attr("style", "visibility: collapse");
+    customaryButton.removeClass("active");
+  });
+
+  calculate.on("click", function (event) {
+    event.preventDefault();
+
+    if (!heightMeasure.val() || !weightMeasure.val()) {
+      result.text("Please fill out all fields");
+      return;
+    }
+
+    if (customaryButton.hasClass("active")) {
+      if (!inches.val()) {
+        result.text("Please fill out all fields");
+        return;
+      }
+
+      const bmi =
+        (weightMeasure.val() /
+          Math.pow(heightMeasure.val() * 12 + inches.val(), 2)) *
+        703;
+      result.text(`Your BMI is ${bmi.toFixed(2)}`);
+      return;
+    }
+
+    const bmi = weightMeasure.val() / Math.pow(heightMeasure.val(), 2);
+    result.text(`Your BMI is ${bmi.toFixed(2)}`);
+    return;
+  });
+});

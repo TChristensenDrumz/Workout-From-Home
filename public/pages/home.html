@@ -53,21 +53,66 @@
     <!-- Body -->
     <div class="layout-main-container">
       <div class="main-area">
-        <iframe
-          src="https://www.cdc.gov/healthyweight/assessing/adult-widget/iframe.html"
-          class="borderline"
-          frameborder="0"
-          style="border: none"
-          width="170"
-          height="395"
-          >Please upgrade to web browser that supports iframes to see this CDC
-          widget.</iframe
-        >
-        <iframe
-          src="https://www.mealpro.net/dietanalysis"
-          title="Diet Analysis Calculator"
-          scrolling="yes"
-        ></iframe>
+        <div>
+          <!-- BMI Calculator -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Body Mass Index (BMI)</h5>
+              <h6 class="body-subtitle mb-2 text-muted">
+                Calculator for Adults
+              </h6>
+              <div class="btn-group" role="group" aria-label="BMI Calculator">
+                <button
+                  type="button"
+                  class="btn btn-secondary active"
+                  id="customary"
+                >
+                  Customary
+                </button>
+                <button type="button" class="btn btn-secondary" id="metric">
+                  Metric
+                </button>
+              </div>
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="bmi-height">Height</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="bmi-height"
+                  placeholder="Feet"
+                />
+                <input
+                  type="number"
+                  class="form-control"
+                  id="bmi-height-us"
+                  placeholder="Inches"
+                />
+              </div>
+              <div class="form-group">
+                <label for="bmi-weight">Weight</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="bmi-weight"
+                  placeholder="Pounds"
+                />
+              </div>
+              <h6 id="bmi"></h6>
+              <button type="submit" class="btn btn-primary" id="bmi-calculate">
+                Calculate
+              </button>
+            </form>
+          </div>
+
+          <!-- MealPro Calculator -->
+          <iframe
+            src="https://www.mealpro.net/dietanalysis"
+            title="MealPro Calculator"
+            scrolling="yes"
+          ></iframe>
+        </div>
       </div>
 
       <!-- Footer -->
