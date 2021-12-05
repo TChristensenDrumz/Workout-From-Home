@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bevan&family=Outfit:wght@400;700&display=swap");
 
 :root {
+  --clr-light-green: #1ba4849a;
   --clr-green: #1ba484;
+  --clr-dark-green: #108368;
   --clr-purple: #6646969a;
   --clr-dark-purple: #664696;
+  --clr-dark-purple-a: #55338a;
   --font-bevan: "Bevan", cursive;
   --font-outfit: "Outfit", sans-serif;
 }

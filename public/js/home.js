@@ -23,7 +23,7 @@ $(document).ready(function () {
     metricButton.addClass("active");
     heightMeasure.prop("placeholder", "Meters");
     weightMeasure.prop("placeholder", "Kilograms");
-    inches.attr("style", "visibility: collapse");
+    inches.attr("style", "display: none");
     customaryButton.removeClass("active");
   });
 
