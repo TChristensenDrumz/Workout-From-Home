@@ -56,92 +56,104 @@
         <h1 class="home-header">Welcome to your virtual gym!</h1>
         <div class="home-grid">
           <!-- Options -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Ready to get your workout on? 💪🏻</h5>
-              <div class="home-options">
-                <a href="/routine" class="btn btn-primary option my-3"
-                  >View your routine</a
-                >
-                <a href="/workout" class="btn btn-primary option mb-3"
-                  >Start a workout</a
-                >
-                <a href="/gym" class="btn btn-primary option mb-3"
-                  >Customize your gym</a
-                >
+          <div class="home-main">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Ready to get your workout on? 💪🏻</h5>
+                <div class="home-options">
+                  <a href="/routine" class="btn btn-primary option my-3"
+                    >View your routine</a
+                  >
+                  <a href="/workout" class="btn btn-primary option mb-3"
+                    >Start a workout</a
+                  >
+                  <a href="/gym" class="btn btn-primary option mb-3"
+                    >Customize your gym</a
+                  >
+                </div>
               </div>
             </div>
           </div>
 
           <!-- BMI Calculator -->
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Body Mass Index (BMI)</h5>
-              <h6 class="body-subtitle mb-2 text-muted">
-                Calculator for Adults
-              </h6>
-              <div class="btn-group" role="group" aria-label="BMI Calculator">
-                <button
-                  type="button"
-                  class="btn btn-secondary active"
-                  id="customary"
-                >
-                  Customary
-                </button>
-                <button type="button" class="btn btn-secondary" id="metric">
-                  Metric
-                </button>
-              </div>
-              <form>
-                <div class="form-group">
-                  <label for="bmi-height">Height</label>
-                  <div class="d-flex">
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="bmi-height"
-                      placeholder="Feet"
-                    />
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="bmi-height-us"
-                      placeholder="Inches"
-                    />
+          <div class="home-bmi">
+            <div class="card bmi-calc">
+              <div class="card-body">
+                <h5 class="card-title">Body Mass Index (BMI)</h5>
+                <h6 class="body-subtitle mb-2 text-muted">
+                  Calculator for Adults
+                </h6>
+                <div class="measurements">
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="BMI Calculator"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-secondary active"
+                      id="customary"
+                    >
+                      Customary
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="metric">
+                      Metric
+                    </button>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="bmi-weight">Weight</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="bmi-weight"
-                    placeholder="Pounds"
-                  />
-                </div>
-                <h6 id="bmi"></h6>
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  id="bmi-calculate"
-                >
-                  Calculate
-                </button>
-              </form>
+                <form>
+                  <div class="form-group">
+                    <label for="bmi-height">Height</label>
+                    <div class="d-flex">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="bmi-height"
+                        placeholder="Feet"
+                      />
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="bmi-height-us"
+                        placeholder="Inches"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="bmi-weight">Weight</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="bmi-weight"
+                      placeholder="Pounds"
+                    />
+                  </div>
+                  <h6 id="bmi"></h6>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="bmi-calculate"
+                  >
+                    Calculate
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
 
           <!-- MealPro Calculator -->
-          <div class="p-2">
-            <div class="mealpro-container">
-              <h5 class="mealpro">
-                Check out this calorie calculator by MealPro!
-              </h5>
-              <iframe
-                src="https://www.mealpro.net/dietanalysis"
-                title="MealPro Calculator"
-                scrolling="yes"
-              ></iframe>
+          <div class="home-mealpro">
+            <div class="mealpro-padding">
+              <div class="mealpro-container">
+                <h5 class="mealpro">
+                  Check out this calorie calculator by MealPro!
+                </h5>
+                <iframe
+                  src="https://www.mealpro.net/dietanalysis"
+                  title="MealPro Calculator"
+                  scrolling="yes"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>

@@ -13,6 +13,43 @@
   background-color: white;
 }
 
+@media (min-width: 1200px) {
+  .home-header {
+    color: var(--clr-dark-purple);
+    background-color: white;
+  }
+
+  .home-grid {
+    height: calc(100% - 4.063rem);
+    display: grid;
+
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "bmi main mealpro";
+
+    background-color: var(--clr-purple);
+  }
+
+  .home-bmi {
+    grid-area: bmi;
+  }
+
+  .home-main {
+    grid-area: main;
+  }
+
+  .home-mealpro {
+    grid-area: mealpro;
+  }
+
+  .home-bmi,
+  .home-main,
+  .home-mealpro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .home-options {
   display: flex;
   flex-direction: column;
@@ -27,6 +64,27 @@
 .card {
   border-radius: 0;
   border-color: var(--clr-green) transparent;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    border-radius: 0.25rem;
+    border-color: var(--clr-green);
+  }
+}
+
+@media (min-width: 1200px) {
+  @media (max-width: 1699px) {
+    .bmi-calc {
+      width: 80%;
+    }
+  }
+}
+
+.measurements {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .btn-primary {
@@ -48,6 +106,7 @@
 .btn-secondary {
   background-color: var(--clr-green);
   border-color: var(--clr-green);
+  font-size: 0.7rem;
 }
 
 .btn-secondary:hover,
@@ -68,6 +127,12 @@ iframe {
   height: 700px;
 }
 
+@media (min-width: 1200px) {
+  iframe {
+    height: 400px;
+  }
+}
+
 .mealpro-container {
   background-color: var(--clr-green);
   padding: 0.5rem;
@@ -76,6 +141,16 @@ iframe {
 .mealpro {
   color: whitesmoke;
   text-align: center;
+}
+
+.mealpro-padding {
+  padding: 0.5rem;
+}
+
+@media (min-width: 1200px) {
+  .mealpro-padding {
+    padding: 0;
+  }
 }
 
 .virtual-gym-background {
