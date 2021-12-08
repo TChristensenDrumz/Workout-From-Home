@@ -86,4 +86,4 @@ VALUES
 ('Russian Twist', 'Abs', 'Gym Mat'),
 ('Russian Twist - Medicine Ball', 'Abs', 'Medicine Ball'),
 ('Side Lunges', 'Lower', 'Medicine Ball'),
-('Slams', 'All', 'Medicine Ball'),
+('Slams', 'All', 'Medicine Ball');
