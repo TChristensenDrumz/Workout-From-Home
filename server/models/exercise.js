@@ -5,10 +5,6 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       unique: true,
     },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     category: {
       type: DataTypes.STRING,
       allowNull: false,
