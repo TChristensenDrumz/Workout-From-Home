@@ -1,0 +1,58 @@
+.routine-large-text {
+  width: 100vw;
+
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.rt-header {
+  color: whitesmoke;
+  background-color: var(--clr-purple);
+  border-bottom: 1px solid var(--clr-dark-purple);
+}
+
+.rt-intro {
+  color: var(--clr-dark-purple);
+  background-color: white;
+}
+
+.routine-grid {
+  display: grid;
+
+  grid-template-rows: 50vh 50vh 50vh 50vh;
+  grid-template-areas: "rt-all" "rt-upper" "rt-abs" "rt-lower";
+}
+
+.rt-all {
+  grid-area: rt-all;
+}
+
+.rt-upper {
+  grid-area: rt-upper;
+}
+
+.rt-abs {
+  grid-area: rt-abs;
+}
+
+.rt-lower {
+  grid-area: rt-lower;
+}
+
+.rt-all,
+.rt-upper,
+.rt-abs,
+.rt-lower {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.routine-background {
+  background-image: url("../../assets/images/routine/routineequipment.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
