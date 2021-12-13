@@ -45,10 +45,11 @@ $(document).ready(function () {
         return;
       }
 
-      const bmi =
-        (weightMeasure.val() /
-          Math.pow(heightMeasure.val() * 12 + inches.val(), 2)) *
-        703;
+      const allInches =
+        parseInt(heightMeasure.val()) * 12 + parseInt(inches.val());
+      console.log(allInches);
+
+      const bmi = (weightMeasure.val() / Math.pow(allInches, 2)) * 703;
       result.text(`Your BMI is ${bmi.toFixed(2)}`);
       return;
     }
