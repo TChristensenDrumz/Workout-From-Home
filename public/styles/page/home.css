@@ -81,6 +81,12 @@
   }
 }
 
+@media (min-width: 1700px) {
+  .bmi-calc {
+    min-width: 31.75rem;
+  }
+}
+
 .measurements {
   display: flex;
   justify-content: flex-end;
