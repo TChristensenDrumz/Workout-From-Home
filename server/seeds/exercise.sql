@@ -1,4 +1,4 @@
-INSERT INTO exercises (exercise_name, category, equipment)
+INSERT IGNORE INTO exercises (exercise_name, category, equipment)
 VALUES
 ('Jumping Jacks', 'Warmup', 'None'),
 ('Walking Knee Hugs', 'Warmup', 'None'),
