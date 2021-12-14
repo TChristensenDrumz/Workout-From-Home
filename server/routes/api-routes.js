@@ -97,16 +97,22 @@ module.exports = function (app) {
     });
   }
 
-  app.get("/api/getExercises", async function (req, res) {
+  app.get("/api/getExercises", function (req, res) {
     if (!req.user) {
       res.json({});
     } else {
-      const warmups = await generateWarmups();
-      const equipment = JSON.parse(req.user.equipment);
-      equipment.push("None");
-      const exercises = await generateExercises(equipment);
+      db.User.findOne({
+        where: {
+          id: req.user.id,
+        },
+      }).then(async function (data) {
+        const warmups = await generateWarmups();
+        const equipment = JSON.parse(data.equipment);
+        equipment.push("None");
+        const exercises = await generateExercises(equipment);
 
-      res.json({ warmups: warmups, exercises: exercises });
+        res.json({ warmups: warmups, exercises: exercises });
+      });
     }
   });
 
