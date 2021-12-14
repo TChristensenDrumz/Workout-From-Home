@@ -50,6 +50,20 @@
   align-items: center;
 }
 
+.card {
+  width: 95%;
+  height: 95%;
+
+  text-align: center;
+  color: var(--clr-dark-purple);
+
+  overflow: scroll;
+}
+
+.card-title {
+  text-decoration: underline;
+}
+
 .routine-background {
   background-image: url("../../assets/images/routine/routineequipment.jpg");
   background-size: cover;

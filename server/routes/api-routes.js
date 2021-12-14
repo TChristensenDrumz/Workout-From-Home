@@ -4,11 +4,6 @@ const passport = require("../config/passport");
 const EMAIL_VALIDATION =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const caber = require("caber");
-const warmup = caber.parse(
-  "Jumping Jacks\nWalking Knee Hugs\nArm Circles\nSide Shuffles\nBackpedaling\nLunges\nLeg Swings\nInch Worms\nCrab Walk\nNeck Stretch\nTricep Stretch\nShoulder Stretch\nDynamic Chest\nMid Back Turn\nHip Circles\nToe Touches\nNeck Tilts"
-);
-
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -46,7 +41,6 @@ module.exports = function (app) {
 
   // Route for getting some data about our user to be used client side
   app.get("/api/userData", function (req, res) {
-    console.log(req.user);
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});
@@ -56,21 +50,66 @@ module.exports = function (app) {
           id: req.user.id,
         },
       }).then(function (data) {
-        res.json(
-          data
-          // equipment: data.equipment
-          // id: data.id,
-          // email: data.email,
-          // equipment: data.equipment
-        );
+        res.json(data);
       });
-      // instead of grabbing logged in user, go to the database where user's id = id, then grab his info and res.json that information to the front-end
     }
   });
 
-  app.get("/api/warmup", function (req, res) {
-    res.json(warmup);
+  // Helper Function to grab all Warmups
+  function generateWarmups() {
+    return new Promise((resolve) => {
+      const warmups = [];
+      db.Exercise.findAll({
+        where: {
+          category: "Warmup",
+        },
+      }).then(function (data) {
+        data.forEach((warmup) => {
+          warmups.push(warmup.dataValues.exercise_name);
+        });
+        resolve(warmups);
+      });
+    });
+  }
+
+  // Helper Function to grab all exercises applicable to the user's gym
+  function generateExercises(equipment) {
+    return new Promise((resolve) => {
+      const exercises = [];
+      equipment.forEach((element, index, array) => {
+        db.Exercise.findAll({
+          where: {
+            equipment: element,
+          },
+        }).then(function (data) {
+          data.forEach((exercise) => {
+            exercises.push({
+              exercise_name: exercise.dataValues.exercise_name,
+              category: exercise.dataValues.category,
+              equipment: exercise.dataValues.equipment,
+            });
+          });
+          if (index === array.length - 1) {
+            resolve(exercises);
+          }
+        });
+      });
+    });
+  }
+
+  app.get("/api/getExercises", async function (req, res) {
+    if (!req.user) {
+      res.json({});
+    } else {
+      const warmups = await generateWarmups();
+      const equipment = JSON.parse(req.user.equipment);
+      equipment.push("None");
+      const exercises = await generateExercises(equipment);
+
+      res.json({ warmups: warmups, exercises: exercises });
+    }
   });
+
   //Route to update user data
   app.put("/api/userData", function (req, res) {
     db.User.update(
